@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/student/Documents/AI2Workspace/LUDO_ercos18/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -g   -std=gnu++11 -o CMakeFiles/main.dir/Domain-Code/game.cpp.o -c /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/game.cpp",
+  "file": "/home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/game.cpp"
+},
+{
+  "directory": "/home/student/Documents/AI2Workspace/LUDO_ercos18/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -g   -std=gnu++11 -o CMakeFiles/main.dir/Domain-Code/main.cpp.o -c /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/main.cpp",
+  "file": "/home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/main.cpp"
+},
+{
+  "directory": "/home/student/Documents/AI2Workspace/LUDO_ercos18/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -g   -std=gnu++11 -o CMakeFiles/main.dir/Domain-Code/q_player.cpp.o -c /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/q_player.cpp",
+  "file": "/home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/q_player.cpp"
+},
+{
+  "directory": "/home/student/Documents/AI2Workspace/LUDO_ercos18/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -g   -std=gnu++11 -o CMakeFiles/main.dir/Domain-Code/test_game.cpp.o -c /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/test_game.cpp",
+  "file": "/home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/test_game.cpp"
+}
+]
