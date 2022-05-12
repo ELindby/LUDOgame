@@ -2,8 +2,8 @@
 #define Q_PLAYER_H
 
 #include "iplayer.h"
-//#include "q_table.h"
 #include "random"
+#include "q_table.h"
 
 //Misc. defines to avoid magic numbers
 #define AMOUNT_OF_PIECES        4
@@ -37,6 +37,7 @@ private:
     std::vector<int> predict_positions(int piece_idx);
     int predict_movement(int init_pos);
     void predict_knockouts(int piece_idx, std::vector<int>& pred_positions);
+    int get_state_from_pos(std::vector<int> positions);
 
     bool globe(int position);
 };

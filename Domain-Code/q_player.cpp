@@ -21,32 +21,40 @@ int Q_player::make_decision(){
      * Determine which move to make with Q-learning player
      *********************************************************/
     // Determine which pieces have valid moves
-    // Note: is_valid_move(piece) actually determines if the piece HAS valid moves
-    // int movable_pieces[AMOUNT_OF_PIECES];
-    // int valid_pieces = 0;
+    /*Note: is_valid_move(piece) actually determines if the piece HAS valid moves*/
     std::vector<int> movable_pieces;
-    //test
-
     for (int piece_idx = 0; piece_idx < AMOUNT_OF_PIECES; piece_idx++){
         if (is_valid_move(piece_idx)){
             movable_pieces.push_back(piece_idx);
-            // movable_pieces[valid_pieces] = piece_idx;
-            // valid_pieces += 1;
         }
     }
 
     // If amount of movable pieces <= 1, decision is forced
-    if (movable_pieces.size() == 0){
-        return -1;
-    }
-    if (movable_pieces.size() == 0){
-        return ;
-    }
+    if (movable_pieces.size() == 0)
+        return -1; //Debug value
+    if (movable_pieces.size() == 1)
+        return movable_pieces[0];
     
     // Decide the best piece to move from movable pieces
-    for (int i = 0; i < movable_pieces.size(); i++)
-    {
-        /* code */
+    double best_Q_value = -9999;
+    std::vector<int> best_moves;
+    std::vector<int> predicted_positions; //Initilization outside for time opt.
+    for (int i = 0; i < movable_pieces.size(); i++){
+        int candidate_piece = movable_pieces[i];
+        predicted_positions = predict_positions(candidate_piece);
+        int state           = get_state_from_pos(predicted_positions);
+        double Q_value      = Q_table->get_Q_value(state);
+
+        if (Q_value > best_Q_value){
+            best_moves.clear();
+            best_moves.push_back(candidate_piece);
+            best_Q_value = Q_value;
+        }
+        else if (Q_value == best_Q_value){
+            best_moves.push_back(candidate_piece);
+        }
+        
+        
     }
     
     
@@ -55,6 +63,8 @@ int Q_player::make_decision(){
 std::vector<int> Q_player::predict_positions(int candidate_piece_idx){
     /*********************************************************
      * Predict positions outcome of moving a certain (candidate) piece
+     * input:  Piece that will be moved
+     * output: Positions of all pieces after moving
      *********************************************************/
     std::vector<int> predicted_positions;
     for (int piece_idx = 0; piece_idx < AMOUNT_OF_PIECES_TOTAL; piece_idx++){
@@ -73,7 +83,7 @@ std::vector<int> Q_player::predict_positions(int candidate_piece_idx){
         candidate_piece_res_pos =  predict_movement(candidate_piece_init_pos);
     }
 
-    //Update positions
+    //Update positions (Including knockouts)
     predicted_positions[candidate_piece_idx] = candidate_piece_res_pos;
     predict_knockouts(candidate_piece_idx, predicted_positions);
 
@@ -82,7 +92,7 @@ std::vector<int> Q_player::predict_positions(int candidate_piece_idx){
 
 int Q_player::predict_movement(int init_pos){
     /*********************************************************
-     * Predict single position movement using Ludo rules
+     * Predict position of  a single pieces movement using Ludo rules
      *********************************************************/
     int res_pos = init_pos + dice;
 
@@ -94,7 +104,7 @@ int Q_player::predict_movement(int init_pos){
     else if (res_pos == 50)
         res_pos += 6;
 
-    // Check if piece to finishline and react accordingly 
+    // Check if piece moves to finishline and react accordingly 
     if (res_pos == 56) //Finish space
         res_pos = 99;
     else if (res_pos > 55) //"Past" finish space (bounces back)
@@ -131,6 +141,14 @@ void Q_player::predict_knockouts(int cand_piece_idx, std::vector<int>& pred_posi
         pred_positions[victim_idx] = -1;
     
     return; //TODO: Optimize if statements runtime
+}
+
+int Q_player::get_state_from_pos(std::vector<int> positions){
+    /**************************************************************
+     * Calculate the state (q-table idx) from (predicted) positions
+     **************************************************************/
+    
+    return 0;
 }
 
 bool Q_player::globe(int position){
