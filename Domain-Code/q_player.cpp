@@ -40,10 +40,10 @@ int Q_player::make_decision(){
     std::vector<int> best_moves;
     std::vector<int> predicted_positions; //Initilization outside for time opt.
     for (int i = 0; i < movable_pieces.size(); i++){
-        int candidate_piece = movable_pieces[i];
-        predicted_positions = predict_positions(candidate_piece);
-        int state           = get_state_from_pos(predicted_positions);
-        double Q_value      = Q_table->get_Q_value(state);
+        int candidate_piece     = movable_pieces[i];
+        predicted_positions     = predict_positions(candidate_piece);
+        std::vector<int> state  = get_state_from_pos(predicted_positions);
+        double Q_value          = Q_table->get_Q_value(state);
 
         if (Q_value > best_Q_value){
             best_moves.clear();
@@ -143,13 +143,41 @@ void Q_player::predict_knockouts(int cand_piece_idx, std::vector<int>& pred_posi
     return; //TODO: Optimize if statements runtime
 }
 
-int Q_player::get_state_from_pos(std::vector<int> positions){
+std::vector<int> Q_player::get_state_from_pos(std::vector<int> positions){
     /**************************************************************
      * Calculate the state (q-table idx) from (predicted) positions
      **************************************************************/
+    // Count amount of pieces in different piece states (for sorted result)
+    int n_HOME = 0, n_SAFE = 0, n_DANGER = 0, n_GOAL = 0;
+    for (int i = 0; i < AMOUNT_OF_PIECES; i++){
+        if ( positions[i] == HOME_POSITION )
+            n_HOME++;
+        else if ( globe(positions[i]) )
+            n_SAFE++;
+        else if ( positions[i] == GOAL_POSITION )
+            n_GOAL++;
+        else
+            n_DANGER++;
+    }
+
+    //Place piece states into state in a sorted manner
+    std::vector<int> state;
+    for (int i = 0; i < n_HOME; i++)
+        state.push_back(HOME);
+    for (int i = 0; i < n_SAFE; i++)
+        state.push_back(SAFE);
+    for (int i = 0; i < n_DANGER; i++)
+        state.push_back(DANGER);
+    for (int i = 0; i < n_GOAL; i++)
+        state.push_back(GOAL);
     
-    return 0;
+
+    if(state.size() != AMOUNT_OF_PIECES) throw std::exception();
+    
+    return state;
 }
+
+
 
 bool Q_player::globe(int position){
     if((position % 13) == 0)
