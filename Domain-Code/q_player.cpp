@@ -25,6 +25,7 @@ int Q_player::make_decision(){
     // int movable_pieces[AMOUNT_OF_PIECES];
     // int valid_pieces = 0;
     std::vector<int> movable_pieces;
+    //test
 
     for (int piece_idx = 0; piece_idx < AMOUNT_OF_PIECES; piece_idx++){
         if (is_valid_move(piece_idx)){
