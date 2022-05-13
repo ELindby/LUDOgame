@@ -14,7 +14,7 @@
 class Q_player : public iplayer
 {
 private:
-    //Q_Table* q_table;
+    Q_Table* q_table;
 
     // Variable parameters
     double alpha         = 0.1;
@@ -28,20 +28,26 @@ private:
     std::uniform_int_distribution<int> distribution;
 public:
     // Constructors
-    Q_player(/*Q_Table& table*/);
-    Q_player(/*Q_Table& table, */double learning_rate);
+    Q_player(Q_Table& table);
+    Q_player(Q_Table& table, double learning_rate);
 
     // Public functions
     
 private:
     // Private functions
     int make_decision();
-    std::vector<int> predict_positions(int piece_idx);
-    int predict_movement(int init_pos);
-    void predict_knockouts(int piece_idx, std::vector<int>& pred_positions);
+    std::vector<int> predict_positions(int piece_idx, int& action);
+    int predict_movement(int init_pos, int & action);
+    void predict_knockouts(int piece_idx, std::vector<int>& pred_positions, int& action);
+
+    //Get state
+    std::vector<int> get_current_state();
     std::vector<int> get_state_from_pos(std::vector<int> positions);
 
-    bool globe(int position);
+    //Check tiles
+    bool globe(int tile_position);
+    bool goal_zone(int tile_position);
+    bool in_range_of_opponent(int piece_position);
 };
 
 

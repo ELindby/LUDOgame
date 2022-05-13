@@ -1,0 +1,1 @@
+Check if piece moves to safety: only if ENTERING goalzone, a move WITHIN goalzone (not rebound, that has unique state) should not count as Move to safety.
