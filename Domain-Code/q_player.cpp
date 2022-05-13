@@ -38,6 +38,7 @@ int Q_player::make_decision(){
     std::vector<int> state  = get_current_state();
     double best_Q_value = -9999;
     std::vector<int> best_moves;
+    std::vector<std::vector<int>> best_predicted_positions;
     std::vector<int> predicted_positions; //Initilization outside for time opt.
     for (int i = 0; i < movable_pieces.size(); i++){
         int candidate_piece     = movable_pieces[i];
@@ -50,15 +51,26 @@ int Q_player::make_decision(){
         if (Q_value > best_Q_value){
             best_moves.clear();
             best_moves.push_back(candidate_piece);
+            best_predicted_positions.clear();
+            best_predicted_positions.push_back(predicted_positions);
             best_Q_value = Q_value;
         }
         else if (Q_value == best_Q_value){
             best_moves.push_back(candidate_piece);
+            best_predicted_positions.push_back(predicted_positions);
         }
         
     }
-    
-    return best_moves[0];
+
+    // If multiple best moves, choose one at random
+    distribution = std::uniform_int_distribution<int>(0, best_moves.size() - 1);
+    int random_best_move = distribution(generator);
+
+    //Perform learning
+    //TODO: Do the learning
+
+    // Return (random if multiple) best move
+    return best_moves[random_best_move];
 }
 
 std::vector<int> Q_player::predict_positions(int candidate_piece_idx, int & action){
@@ -269,5 +281,6 @@ bool Q_player::in_range_of_opponent(int piece_position){
     }
 
     return false;
-}
+} /*Used to find action, and not state, wont be used on state t+1
+    Therefore using class variable position instead of input should be fine.*/
 
