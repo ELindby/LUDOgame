@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/Documents/AI2Workspace/LUDO_ercos18
+CMAKE_SOURCE_DIR = /home/student/Documents/AI2Workspace/LUDOgame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/Documents/AI2Workspace/LUDO_ercos18/build
+CMAKE_BINARY_DIR = /home/student/Documents/AI2Workspace/LUDOgame/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles /home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles /home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -204,6 +204,33 @@ Domain-Code/q_player.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Domain-Code/q_player.cpp.s
 .PHONY : Domain-Code/q_player.cpp.s
 
+Domain-Code/q_table.o: Domain-Code/q_table.cpp.o
+
+.PHONY : Domain-Code/q_table.o
+
+# target to build an object file
+Domain-Code/q_table.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Domain-Code/q_table.cpp.o
+.PHONY : Domain-Code/q_table.cpp.o
+
+Domain-Code/q_table.i: Domain-Code/q_table.cpp.i
+
+.PHONY : Domain-Code/q_table.i
+
+# target to preprocess a source file
+Domain-Code/q_table.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Domain-Code/q_table.cpp.i
+.PHONY : Domain-Code/q_table.cpp.i
+
+Domain-Code/q_table.s: Domain-Code/q_table.cpp.s
+
+.PHONY : Domain-Code/q_table.s
+
+# target to generate assembly for a file
+Domain-Code/q_table.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Domain-Code/q_table.cpp.s
+.PHONY : Domain-Code/q_table.cpp.s
+
 Domain-Code/test_game.o: Domain-Code/test_game.cpp.o
 
 .PHONY : Domain-Code/test_game.o
@@ -249,6 +276,9 @@ help:
 	@echo "... Domain-Code/q_player.o"
 	@echo "... Domain-Code/q_player.i"
 	@echo "... Domain-Code/q_player.s"
+	@echo "... Domain-Code/q_table.o"
+	@echo "... Domain-Code/q_table.i"
+	@echo "... Domain-Code/q_table.s"
 	@echo "... Domain-Code/test_game.o"
 	@echo "... Domain-Code/test_game.i"
 	@echo "... Domain-Code/test_game.s"

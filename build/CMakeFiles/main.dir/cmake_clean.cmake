@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/Domain-Code/game.cpp.o"
   "CMakeFiles/main.dir/Domain-Code/main.cpp.o"
   "CMakeFiles/main.dir/Domain-Code/q_player.cpp.o"
+  "CMakeFiles/main.dir/Domain-Code/q_table.cpp.o"
   "CMakeFiles/main.dir/Domain-Code/test_game.cpp.o"
   "main"
   "main.pdb"

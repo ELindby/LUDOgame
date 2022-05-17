@@ -4,10 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/game.cpp" "/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles/main.dir/Domain-Code/game.cpp.o"
-  "/home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/main.cpp" "/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles/main.dir/Domain-Code/main.cpp.o"
-  "/home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/q_player.cpp" "/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles/main.dir/Domain-Code/q_player.cpp.o"
-  "/home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/test_game.cpp" "/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles/main.dir/Domain-Code/test_game.cpp.o"
+  "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/game.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/game.cpp.o"
+  "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/main.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/main.cpp.o"
+  "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_player.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/q_player.cpp.o"
+  "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_table.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/q_table.cpp.o"
+  "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/test_game.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/test_game.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

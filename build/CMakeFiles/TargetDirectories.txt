@@ -1,3 +1,3 @@
-/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles/rebuild_cache.dir
-/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles/edit_cache.dir
-/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles/main.dir
+/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/rebuild_cache.dir
+/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/edit_cache.dir
+/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/Documents/AI2Workspace/LUDO_ercos18
+CMAKE_SOURCE_DIR = /home/student/Documents/AI2Workspace/LUDOgame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/Documents/AI2Workspace/LUDO_ercos18/build
+CMAKE_BINARY_DIR = /home/student/Documents/AI2Workspace/LUDOgame/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -59,61 +59,75 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/Domain-Code/game.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Domain-Code/game.cpp.o: ../Domain-Code/game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/Domain-Code/game.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/game.cpp.o -c /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/Domain-Code/game.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/game.cpp.o -c /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/game.cpp
 
 CMakeFiles/main.dir/Domain-Code/game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Domain-Code/game.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/game.cpp > CMakeFiles/main.dir/Domain-Code/game.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/game.cpp > CMakeFiles/main.dir/Domain-Code/game.cpp.i
 
 CMakeFiles/main.dir/Domain-Code/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Domain-Code/game.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/game.cpp -o CMakeFiles/main.dir/Domain-Code/game.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/game.cpp -o CMakeFiles/main.dir/Domain-Code/game.cpp.s
 
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/Domain-Code/main.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/main.cpp.o -c /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/Domain-Code/main.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/main.cpp.o -c /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/main.cpp
 
 CMakeFiles/main.dir/Domain-Code/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Domain-Code/main.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/main.cpp > CMakeFiles/main.dir/Domain-Code/main.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/main.cpp > CMakeFiles/main.dir/Domain-Code/main.cpp.i
 
 CMakeFiles/main.dir/Domain-Code/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Domain-Code/main.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/main.cpp -o CMakeFiles/main.dir/Domain-Code/main.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/main.cpp -o CMakeFiles/main.dir/Domain-Code/main.cpp.s
 
 CMakeFiles/main.dir/Domain-Code/q_player.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Domain-Code/q_player.cpp.o: ../Domain-Code/q_player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/Domain-Code/q_player.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/q_player.cpp.o -c /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/q_player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/Domain-Code/q_player.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/q_player.cpp.o -c /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_player.cpp
 
 CMakeFiles/main.dir/Domain-Code/q_player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Domain-Code/q_player.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/q_player.cpp > CMakeFiles/main.dir/Domain-Code/q_player.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_player.cpp > CMakeFiles/main.dir/Domain-Code/q_player.cpp.i
 
 CMakeFiles/main.dir/Domain-Code/q_player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Domain-Code/q_player.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/q_player.cpp -o CMakeFiles/main.dir/Domain-Code/q_player.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_player.cpp -o CMakeFiles/main.dir/Domain-Code/q_player.cpp.s
+
+CMakeFiles/main.dir/Domain-Code/q_table.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Domain-Code/q_table.cpp.o: ../Domain-Code/q_table.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/Domain-Code/q_table.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/q_table.cpp.o -c /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_table.cpp
+
+CMakeFiles/main.dir/Domain-Code/q_table.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Domain-Code/q_table.cpp.i"
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_table.cpp > CMakeFiles/main.dir/Domain-Code/q_table.cpp.i
+
+CMakeFiles/main.dir/Domain-Code/q_table.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Domain-Code/q_table.cpp.s"
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_table.cpp -o CMakeFiles/main.dir/Domain-Code/q_table.cpp.s
 
 CMakeFiles/main.dir/Domain-Code/test_game.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Domain-Code/test_game.cpp.o: ../Domain-Code/test_game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/Domain-Code/test_game.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/test_game.cpp.o -c /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/test_game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/Domain-Code/test_game.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/test_game.cpp.o -c /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/test_game.cpp
 
 CMakeFiles/main.dir/Domain-Code/test_game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Domain-Code/test_game.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/test_game.cpp > CMakeFiles/main.dir/Domain-Code/test_game.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/test_game.cpp > CMakeFiles/main.dir/Domain-Code/test_game.cpp.i
 
 CMakeFiles/main.dir/Domain-Code/test_game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Domain-Code/test_game.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/Documents/AI2Workspace/LUDO_ercos18/Domain-Code/test_game.cpp -o CMakeFiles/main.dir/Domain-Code/test_game.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/test_game.cpp -o CMakeFiles/main.dir/Domain-Code/test_game.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/Domain-Code/game.cpp.o" \
 "CMakeFiles/main.dir/Domain-Code/main.cpp.o" \
 "CMakeFiles/main.dir/Domain-Code/q_player.cpp.o" \
+"CMakeFiles/main.dir/Domain-Code/q_table.cpp.o" \
 "CMakeFiles/main.dir/Domain-Code/test_game.cpp.o"
 
 # External object files for target main
@@ -122,10 +136,11 @@ main_EXTERNAL_OBJECTS =
 main: CMakeFiles/main.dir/Domain-Code/game.cpp.o
 main: CMakeFiles/main.dir/Domain-Code/main.cpp.o
 main: CMakeFiles/main.dir/Domain-Code/q_player.cpp.o
+main: CMakeFiles/main.dir/Domain-Code/q_table.cpp.o
 main: CMakeFiles/main.dir/Domain-Code/test_game.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +153,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /home/student/Documents/AI2Workspace/LUDO_ercos18/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/Documents/AI2Workspace/LUDO_ercos18 /home/student/Documents/AI2Workspace/LUDO_ercos18 /home/student/Documents/AI2Workspace/LUDO_ercos18/build /home/student/Documents/AI2Workspace/LUDO_ercos18/build /home/student/Documents/AI2Workspace/LUDO_ercos18/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/student/Documents/AI2Workspace/LUDOgame/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/Documents/AI2Workspace/LUDOgame /home/student/Documents/AI2Workspace/LUDOgame /home/student/Documents/AI2Workspace/LUDOgame/build /home/student/Documents/AI2Workspace/LUDOgame/build /home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

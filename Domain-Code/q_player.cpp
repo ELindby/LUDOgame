@@ -1,18 +1,30 @@
 #include "q_player.h"
 #include <iostream>
 #include <exception>
-#include <vector>
+//#include <vector>
+
+// Q_player::Q_player(){
+//     Q_Table table;
+//     //Q_player(table, default_alpha);
+//     q_table = &table;
+//     std::random_device rd;
+//     generator = std::mt19937(rd());
+//     alpha = default_alpha;
+// }
 
 Q_player::Q_player(Q_Table& table){
-    Q_player(table, default_alpha);
+    //Q_player(table, default_alpha);
+    q_table = &table;
+    std::random_device rd;
+    generator = std::mt19937(rd());
+    alpha = default_alpha;
 }
 
 Q_player::Q_player(Q_Table &table, double learning_rate){
     q_table = &table;
-    alpha = learning_rate;
-
     std::random_device rd;
     generator = std::mt19937(rd());
+    alpha = learning_rate;
 }
 
 int Q_player::make_decision(){
@@ -65,12 +77,21 @@ int Q_player::make_decision(){
     // If multiple best moves, choose one at random
     distribution = std::uniform_int_distribution<int>(0, best_moves.size() - 1);
     int random_best_move = distribution(generator);
+    int best_move = best_moves[random_best_move];
+    
+    //Predict the next state (used for learning)
+    predicted_positions = best_predicted_positions[random_best_move];
+    std::vector<int> next_state = get_state_from_pos(predicted_positions);
 
-    //Perform learning
-    //TODO: Do the learning
+    // Perform learning - Update Q_value in table
+    double Q_value      = q_table->get_Q_value(state, best_move);
+    double reward       = q_table->get_reward(best_move);
+    double max_Qval_Sp1 = q_table->get_max_Q_value(next_state); //Maximum Qval in qtable for next state
+    double new_Q_value  = Q_value + alpha * (reward + gamma * max_Qval_Sp1 - Q_value);
+    q_table->set_Q_value(state, best_move, new_Q_value);
 
     // Return (random if multiple) best move
-    return best_moves[random_best_move];
+    return best_move;
 }
 
 std::vector<int> Q_player::predict_positions(int candidate_piece_idx, int & action){
@@ -175,8 +196,10 @@ void Q_player::predict_knockouts(int cand_piece_idx, std::vector<int>& pred_posi
     int victim_count = 0;
     int victim_idx; //Only 1 piece saved, no more than one piece can be knocked back
     for (int piece_idx = AMOUNT_OF_PIECES; piece_idx < AMOUNT_OF_PIECES_TOTAL; piece_idx++){
-        if (pred_positions[piece_idx] == cand_piece_pos)
+        if (pred_positions[piece_idx] == cand_piece_pos){
             victim_count += 1;
+            victim_idx = piece_idx;
+        }
     }
 
     //If position moved to is a globe and there is an opponent piece, knock moved piece home

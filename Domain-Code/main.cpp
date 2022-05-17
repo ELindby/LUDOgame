@@ -10,35 +10,72 @@ using namespace std;
 int main()
 {
     //Run the unit tests
-    test_game tester;
-    tester.run_all_tests();
+    // test_game tester;
+    // tester.run_all_tests();
+
+    //Create Q_table for Q_players
+    Q_Table p0_Qtable;
 
     //Create players
-    player_random player_0;
+    //player_random player_0;
+    Q_player      player_0(p0_Qtable);
     player_random player_1;
     player_random player_2;
     player_random player_3;
 
     //Play a game of Ludo
     game g(&player_0, &player_1, &player_2, &player_3);
+    std::cout << "Debug flag 2" << std::endl;
     g.play_game();
+    std::cout << "Debug flag 3" << std::endl;
     cout << "Player " << g.get_winner() << " won the game!" << endl << endl;
 
     //Play many games of Ludo
     int wins[] = {0, 0, 0, 0};
-    for(int i = 0; i < 1000; i++)
+    int n_games             = 50000;
+    int n_games_pr_batch    = 2000;
+    int batches             = n_games / n_games_pr_batch;
+    for (int batch = 0; batch < batches; batch++)
     {
-        g.reset();
-        g.set_first(i%4); //alternate who starts the game
-        g.play_game();
-        wins[g.get_winner()]++;
+        int batch_wins[] = {0, 0, 0, 0};
+        for(int i = 0; i < n_games_pr_batch; i++)
+        {
+            g.reset();
+            g.set_first(i%4); //alternate who starts the game
+            g.play_game();
+            batch_wins[g.get_winner()]++;
+            wins[g.get_winner()]++;
+        }
+        std::cout << "Batch " << batch << " wins: " << std::endl;
+        for(int i = 0; i < 4; i++)
+            cout << "Player " << i << " won " << batch_wins[i] << " games, aka " 
+                 << 100.0*batch_wins[i]/n_games_pr_batch << "% of games." << endl;
     }
+    
+    std::cout << "--- Total wins: " << std::endl;
     for(int i = 0; i < 4; i++)
-        cout << "Player " << i << " won " << wins[i] << " games." << endl;
+        cout << "Player " << i << " won " << wins[i] << " games, aka " 
+             << 100.0*wins[i]/n_games << "% of games." << endl;
+
+    // int wins[] = {0, 0, 0, 0};
+    // int n_games             = 50000;
+    // int n_games_pr_batch    = 500;
+    // for(int i = 0; i < n_games; i++)
+    // {
+    //     g.reset();
+    //     g.set_first(i%4); //alternate who starts the game
+    //     g.play_game();
+    //     wins[g.get_winner()]++;
+    // }
+    // for(int i = 0; i < 4; i++)
+    //     cout << "Player " << i << " won " << wins[i] << " games, aka " 
+    //          << 100.0*wins[i]/n_games << "% of games." << endl;
 
 
     cout << "End of main" << endl;
     return 0;
 }
+
+
 
 

@@ -19,6 +19,7 @@ private:
     // Variable parameters
     double alpha         = 0.1;
     double default_alpha = 0.1;
+    double gamma         = 0.9; //Discount factor on future rewards
 
     // Settings
     bool learning = true;
@@ -28,6 +29,7 @@ private:
     std::uniform_int_distribution<int> distribution;
 public:
     // Constructors
+    //Q_player();
     Q_player(Q_Table& table);
     Q_player(Q_Table& table, double learning_rate);
 

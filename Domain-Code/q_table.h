@@ -1,5 +1,8 @@
 #ifndef Q_TABLE_H
 #define Q_TABLE_H
+#include <iostream>
+#include <exception>
+#include <vector>
 
 #define N_STATES    4
 #define N_ACTIONS  11
@@ -14,13 +17,21 @@ enum ACTIONS     {GO_TO_GOAL, MOVE_FROM_HOME, KNOCK_OPP, KNOCK_SELF, GO_TO_STAR,
 class Q_Table{
 private:
     double q_table[N_STATES][N_STATES][N_STATES][N_STATES][N_ACTIONS] = {0};
-    double init_q_value = 0.25;
+    double init_q_value = 0.0;
+
+    //Rewards
+    std::vector<double> rewards{0.7, 0.4, 0.4, -0.4, 0.3,
+                                0.35, 0.35, 0.1, 0.4, -0.2, -0.5};
+    //std::vector<double> rewards{0.8, 0.5, 0.65, -0.9, 0.6,
+    //                            0.3, 0.4, 0.1, 0.2, -0.8, -0.5};
 
 public:
     Q_Table();
 
     double get_Q_value(std::vector<int> state, int action);
     void   set_Q_value(std::vector<int> state, int action, double Q_value);
+    double get_reward(int action);
+    double get_max_Q_value(std::vector<int> state);
 
 };
 
