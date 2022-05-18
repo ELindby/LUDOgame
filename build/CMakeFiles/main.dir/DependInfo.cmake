@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/erik/Documents/LUDOgame/Domain-Code/q_table.cpp" "/home/erik/Documents/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/q_table.cpp.o"
   "/home/erik/Documents/LUDOgame/Domain-Code/test_game.cpp" "/home/erik/Documents/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/test_game.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

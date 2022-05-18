@@ -60,67 +60,67 @@ include CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Domain-Code/game.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Domain-Code/game.cpp.o: ../Domain-Code/game.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/erik/Documents/LUDOgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/Domain-Code/game.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/game.cpp.o -c /home/erik/Documents/LUDOgame/Domain-Code/game.cpp
+	/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/game.cpp.o -c /home/erik/Documents/LUDOgame/Domain-Code/game.cpp
 
 CMakeFiles/main.dir/Domain-Code/game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Domain-Code/game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erik/Documents/LUDOgame/Domain-Code/game.cpp > CMakeFiles/main.dir/Domain-Code/game.cpp.i
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erik/Documents/LUDOgame/Domain-Code/game.cpp > CMakeFiles/main.dir/Domain-Code/game.cpp.i
 
 CMakeFiles/main.dir/Domain-Code/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Domain-Code/game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erik/Documents/LUDOgame/Domain-Code/game.cpp -o CMakeFiles/main.dir/Domain-Code/game.cpp.s
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erik/Documents/LUDOgame/Domain-Code/game.cpp -o CMakeFiles/main.dir/Domain-Code/game.cpp.s
 
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/erik/Documents/LUDOgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/Domain-Code/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/main.cpp.o -c /home/erik/Documents/LUDOgame/Domain-Code/main.cpp
+	/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/main.cpp.o -c /home/erik/Documents/LUDOgame/Domain-Code/main.cpp
 
 CMakeFiles/main.dir/Domain-Code/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Domain-Code/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erik/Documents/LUDOgame/Domain-Code/main.cpp > CMakeFiles/main.dir/Domain-Code/main.cpp.i
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erik/Documents/LUDOgame/Domain-Code/main.cpp > CMakeFiles/main.dir/Domain-Code/main.cpp.i
 
 CMakeFiles/main.dir/Domain-Code/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Domain-Code/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erik/Documents/LUDOgame/Domain-Code/main.cpp -o CMakeFiles/main.dir/Domain-Code/main.cpp.s
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erik/Documents/LUDOgame/Domain-Code/main.cpp -o CMakeFiles/main.dir/Domain-Code/main.cpp.s
 
 CMakeFiles/main.dir/Domain-Code/q_player.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Domain-Code/q_player.cpp.o: ../Domain-Code/q_player.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/erik/Documents/LUDOgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/Domain-Code/q_player.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/q_player.cpp.o -c /home/erik/Documents/LUDOgame/Domain-Code/q_player.cpp
+	/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/q_player.cpp.o -c /home/erik/Documents/LUDOgame/Domain-Code/q_player.cpp
 
 CMakeFiles/main.dir/Domain-Code/q_player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Domain-Code/q_player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erik/Documents/LUDOgame/Domain-Code/q_player.cpp > CMakeFiles/main.dir/Domain-Code/q_player.cpp.i
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erik/Documents/LUDOgame/Domain-Code/q_player.cpp > CMakeFiles/main.dir/Domain-Code/q_player.cpp.i
 
 CMakeFiles/main.dir/Domain-Code/q_player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Domain-Code/q_player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erik/Documents/LUDOgame/Domain-Code/q_player.cpp -o CMakeFiles/main.dir/Domain-Code/q_player.cpp.s
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erik/Documents/LUDOgame/Domain-Code/q_player.cpp -o CMakeFiles/main.dir/Domain-Code/q_player.cpp.s
 
 CMakeFiles/main.dir/Domain-Code/q_table.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Domain-Code/q_table.cpp.o: ../Domain-Code/q_table.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/erik/Documents/LUDOgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/Domain-Code/q_table.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/q_table.cpp.o -c /home/erik/Documents/LUDOgame/Domain-Code/q_table.cpp
+	/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/q_table.cpp.o -c /home/erik/Documents/LUDOgame/Domain-Code/q_table.cpp
 
 CMakeFiles/main.dir/Domain-Code/q_table.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Domain-Code/q_table.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erik/Documents/LUDOgame/Domain-Code/q_table.cpp > CMakeFiles/main.dir/Domain-Code/q_table.cpp.i
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erik/Documents/LUDOgame/Domain-Code/q_table.cpp > CMakeFiles/main.dir/Domain-Code/q_table.cpp.i
 
 CMakeFiles/main.dir/Domain-Code/q_table.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Domain-Code/q_table.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erik/Documents/LUDOgame/Domain-Code/q_table.cpp -o CMakeFiles/main.dir/Domain-Code/q_table.cpp.s
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erik/Documents/LUDOgame/Domain-Code/q_table.cpp -o CMakeFiles/main.dir/Domain-Code/q_table.cpp.s
 
 CMakeFiles/main.dir/Domain-Code/test_game.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Domain-Code/test_game.cpp.o: ../Domain-Code/test_game.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/erik/Documents/LUDOgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/Domain-Code/test_game.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/test_game.cpp.o -c /home/erik/Documents/LUDOgame/Domain-Code/test_game.cpp
+	/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Domain-Code/test_game.cpp.o -c /home/erik/Documents/LUDOgame/Domain-Code/test_game.cpp
 
 CMakeFiles/main.dir/Domain-Code/test_game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Domain-Code/test_game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erik/Documents/LUDOgame/Domain-Code/test_game.cpp > CMakeFiles/main.dir/Domain-Code/test_game.cpp.i
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erik/Documents/LUDOgame/Domain-Code/test_game.cpp > CMakeFiles/main.dir/Domain-Code/test_game.cpp.i
 
 CMakeFiles/main.dir/Domain-Code/test_game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Domain-Code/test_game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erik/Documents/LUDOgame/Domain-Code/test_game.cpp -o CMakeFiles/main.dir/Domain-Code/test_game.cpp.s
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erik/Documents/LUDOgame/Domain-Code/test_game.cpp -o CMakeFiles/main.dir/Domain-Code/test_game.cpp.s
 
 # Object files for target main
 main_OBJECTS = \

@@ -17,9 +17,9 @@ private:
     Q_Table* q_table;
 
     // Variable parameters
-    double alpha         = 0.1;
+    double alpha         = 0.3;
     double default_alpha = 0.1;
-    double gamma         = 0.9; //Discount factor on future rewards
+    double gamma         = 0.8; //Discount factor on future rewards
 
     // Settings
     bool learning = true;
@@ -34,6 +34,9 @@ public:
     Q_player(Q_Table& table, double learning_rate);
 
     // Public functions
+
+    //Public variables
+    int actions_taken[N_ACTIONS] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     
 private:
     // Private functions

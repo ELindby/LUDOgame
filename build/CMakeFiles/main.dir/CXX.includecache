@@ -50,14 +50,6 @@ iplayer.h
 
 /home/erik/Documents/LUDOgame/Domain-Code/positions_and_dice.h
 
-/home/erik/Documents/LUDOgame/Domain-Code/q_player.cpp
-q_player.h
-/home/erik/Documents/LUDOgame/Domain-Code/q_player.h
-iostream
--
-exception
--
-
 /home/erik/Documents/LUDOgame/Domain-Code/q_player.h
 iplayer.h
 /home/erik/Documents/LUDOgame/Domain-Code/iplayer.h

@@ -32,8 +32,8 @@ int main()
 
     //Play many games of Ludo
     int wins[] = {0, 0, 0, 0};
-    int n_games             = 5000;
-    int n_games_pr_batch    = 100;
+    int n_games             = 3000000;
+    int n_games_pr_batch    = 10000;
     int batches             = n_games / n_games_pr_batch;
     for (int batch = 0; batch < batches; batch++)
     {
@@ -56,6 +56,19 @@ int main()
     for(int i = 0; i < 4; i++)
         cout << "Player " << i << " won " << wins[i] << " games, aka " 
              << 100.0*wins[i]/n_games << "% of games." << endl;
+
+    cout << "States (position) max Q values:" << endl;
+    for (int i = 0; i < 58; i++)
+    {
+        cout << "State(pos) " << i << " has max Qval: " << p0_Qtable.get_max_Q_value(i) << endl;
+    }
+
+    cout << "Number of times actions have been taken:" << endl;
+    for (int i = 0; i < N_ACTIONS; i++)
+    {
+        cout << "Action " << i << " has been chosen: " << player_0.actions_taken[i] << "times."<< endl;
+    }
+    
 
     // int wins[] = {0, 0, 0, 0};
     // int n_games             = 50000;

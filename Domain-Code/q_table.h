@@ -4,7 +4,8 @@
 #include <exception>
 #include <vector>
 
-#define N_STATES    4
+//#define N_STATES    4
+#define N_STATES   58
 #define N_ACTIONS  11
 
 enum PIECE_STATE {HOME = 0, SAFE = 1, DANGER = 2, GOAL = 3};
@@ -21,8 +22,8 @@ private:
     double init_q_value = 0.0;
 
     //Rewards
-    std::vector<double> rewards{0.7, 0.4, 0.4, -0.4, 0.3,
-                                0.35, 0.35, 0.1, 0.4, -0.2, -0.5};
+    std::vector<double> rewards{1.0, 0.6, 0.55, -0.9, 0.3,
+                                0.45, 0.5, 0.1, 0.4, -0.9, -0.5};
     //std::vector<double> rewards{0.8, 0.5, 0.65, -0.9, 0.6,
     //                            0.3, 0.4, 0.1, 0.2, -0.8, -0.5};
 
