@@ -16,7 +16,8 @@ enum ACTIONS     {GO_TO_GOAL, MOVE_FROM_HOME, KNOCK_OPP, KNOCK_SELF, GO_TO_STAR,
 
 class Q_Table{
 private:
-    double q_table[N_STATES][N_STATES][N_STATES][N_STATES][N_ACTIONS] = {0};
+    //double q_table[N_STATES][N_STATES][N_STATES][N_STATES][N_ACTIONS] = {0};
+    double q_table[N_STATES][N_ACTIONS] = {0};
     double init_q_value = 0.0;
 
     //Rewards
@@ -28,10 +29,14 @@ private:
 public:
     Q_Table();
 
-    double get_Q_value(std::vector<int> state, int action);
-    void   set_Q_value(std::vector<int> state, int action, double Q_value);
+    // double get_Q_value(std::vector<int> state, int action);
+    // void   set_Q_value(std::vector<int> state, int action, double Q_value);
+    // double get_max_Q_value(std::vector<int> state);
+    double get_Q_value(int state, int action);
+    void   set_Q_value(int state, int action, double Q_value);
+    double get_max_Q_value(int state);
+
     double get_reward(int action);
-    double get_max_Q_value(std::vector<int> state);
 
 };
 

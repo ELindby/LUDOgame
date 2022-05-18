@@ -47,16 +47,17 @@ int Q_player::make_decision(){
         return movable_pieces[0];
     
     // Decide the best piece to move from movable pieces
-    std::vector<int> state  = get_current_state();
+    std::vector<int> states;//  = get_current_state();
     double best_Q_value = -9999;
     std::vector<int> best_moves;
     std::vector<std::vector<int>> best_predicted_positions;
     std::vector<int> predicted_positions; //Initilization outside for time opt.
     for (int i = 0; i < movable_pieces.size(); i++){
         int candidate_piece     = movable_pieces[i];
+        int state               = get_current_state(candidate_piece);
         int action              = NOTHING; //default value for debug
         predicted_positions     = predict_positions(candidate_piece, action);
-        //std::vector<int> state  = get_state_from_pos(predicted_positions);
+        
         
         double Q_value          = q_table->get_Q_value(state, action);
 
@@ -65,11 +66,14 @@ int Q_player::make_decision(){
             best_moves.push_back(candidate_piece);
             best_predicted_positions.clear();
             best_predicted_positions.push_back(predicted_positions);
+            states.clear();
+            states.push_back(state);
             best_Q_value = Q_value;
         }
         else if (Q_value == best_Q_value){
             best_moves.push_back(candidate_piece);
             best_predicted_positions.push_back(predicted_positions);
+            states.push_back(state);
         }
         
     }
@@ -81,14 +85,17 @@ int Q_player::make_decision(){
     
     //Predict the next state (used for learning)
     predicted_positions = best_predicted_positions[random_best_move];
-    std::vector<int> next_state = get_state_from_pos(predicted_positions);
+    int state           = states[random_best_move];
+    int next_state      = get_state_from_pos(best_move, predicted_positions);
+    //std::vector<int> next_state = get_state_from_pos(predicted_positions);
 
     // Perform learning - Update Q_value in table
     double Q_value      = q_table->get_Q_value(state, best_move);
     double reward       = q_table->get_reward(best_move);
     double max_Qval_Sp1 = q_table->get_max_Q_value(next_state); //Maximum Qval in qtable for next state
     double new_Q_value  = Q_value + alpha * (reward + gamma * max_Qval_Sp1 - Q_value);
-    q_table->set_Q_value(state, best_move, new_Q_value);
+    if (learning)
+        q_table->set_Q_value(state, best_move, new_Q_value);
 
     // Return (random if multiple) best move
     return best_move;
@@ -223,46 +230,75 @@ void Q_player::predict_knockouts(int cand_piece_idx, std::vector<int>& pred_posi
     return; //TODO: Optimize if statements runtime
 }
 
-std::vector<int> Q_player::get_current_state(){
+// std::vector<int> Q_player::get_current_state(){
+//     std::vector<int> current_positions;// = position;
+
+//     for (int i = 0; i < AMOUNT_OF_PIECES_TOTAL; i++){
+//         current_positions.push_back(position[i]);
+//     }
+
+//     return get_state_from_pos(current_positions);
+// }
+
+// std::vector<int> Q_player::get_state_from_pos(std::vector<int> positions){
+//     /**************************************************************
+//      * Calculate the state (q-table idx) from (predicted) positions
+//      **************************************************************/
+//     // Count amount of pieces in different piece states (for sorted result)
+//     int n_HOME = 0, n_SAFE = 0, n_DANGER = 0, n_GOAL = 0;
+//     for (int i = 0; i < AMOUNT_OF_PIECES; i++){
+//         if ( positions[i] == HOME_POSITION )
+//             n_HOME++;
+//         else if ( globe(positions[i]) || (51 <= positions[i] && positions[i] <= 55) )
+//             n_SAFE++;
+//         else if ( positions[i] == GOAL_POSITION )
+//             n_GOAL++;
+//         else
+//             n_DANGER++;
+//     }
+
+//     //Place piece states into state in a sorted manner
+//     std::vector<int> state;
+//     for (int i = 0; i < n_HOME; i++)
+//         state.push_back(HOME);
+//     for (int i = 0; i < n_SAFE; i++)
+//         state.push_back(SAFE);
+//     for (int i = 0; i < n_DANGER; i++)
+//         state.push_back(DANGER);
+//     for (int i = 0; i < n_GOAL; i++)
+//         state.push_back(GOAL);
+    
+
+//     if(state.size() != AMOUNT_OF_PIECES) throw std::exception();
+    
+//     return state;
+// }
+
+int Q_player::get_current_state(int candidate_piece){
     std::vector<int> current_positions;// = position;
 
     for (int i = 0; i < AMOUNT_OF_PIECES_TOTAL; i++){
         current_positions.push_back(position[i]);
     }
 
-    return get_state_from_pos(current_positions);
+    return get_state_from_pos(candidate_piece, current_positions);
 }
 
-std::vector<int> Q_player::get_state_from_pos(std::vector<int> positions){
+int Q_player::get_state_from_pos(int candidate_piece, std::vector<int> positions){
     /**************************************************************
      * Calculate the state (q-table idx) from (predicted) positions
      **************************************************************/
-    // Count amount of pieces in different piece states (for sorted result)
-    int n_HOME = 0, n_SAFE = 0, n_DANGER = 0, n_GOAL = 0;
-    for (int i = 0; i < AMOUNT_OF_PIECES; i++){
-        if ( positions[i] == HOME_POSITION )
-            n_HOME++;
-        else if ( globe(positions[i]) || (51 <= positions[i] && positions[i] <= 55) )
-            n_SAFE++;
-        else if ( positions[i] == GOAL_POSITION )
-            n_GOAL++;
-        else
-            n_DANGER++;
-    }
-
-    //Place piece states into state in a sorted manner
-    std::vector<int> state;
-    for (int i = 0; i < n_HOME; i++)
-        state.push_back(HOME);
-    for (int i = 0; i < n_SAFE; i++)
-        state.push_back(SAFE);
-    for (int i = 0; i < n_DANGER; i++)
-        state.push_back(DANGER);
-    for (int i = 0; i < n_GOAL; i++)
-        state.push_back(GOAL);
-    
-
-    if(state.size() != AMOUNT_OF_PIECES) throw std::exception();
+    // Determine state
+    int state;
+    if ( positions[candidate_piece] == HOME_POSITION )
+        state = HOME;
+    else if ( globe(positions[candidate_piece]) 
+                || (51 <= positions[candidate_piece] && positions[candidate_piece] <= 55) )
+        state = SAFE;
+    else if ( positions[candidate_piece] == GOAL_POSITION )
+        state = GOAL;
+    else
+        state = DANGER;
     
     return state;
 }

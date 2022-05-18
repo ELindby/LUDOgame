@@ -32,8 +32,8 @@ int main()
 
     //Play many games of Ludo
     int wins[] = {0, 0, 0, 0};
-    int n_games             = 50000;
-    int n_games_pr_batch    = 2000;
+    int n_games             = 5000;
+    int n_games_pr_batch    = 100;
     int batches             = n_games / n_games_pr_batch;
     for (int batch = 0; batch < batches; batch++)
     {
