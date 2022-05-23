@@ -4,20 +4,29 @@
 #include "iplayer.h"
 #include "player_random.h"
 #include "q_player.h"
+#include <vector>
 
 using namespace std;
 
-int main()
-{
+std::vector<int> play_games(game &g, int n_games, bool learning){
+    std::vector<int> wins = {0, 0, 0, 0};
+    for(int i = 0; i < n_games; i++){
+        g.reset();
+        g.set_first(i%4); //alternate who starts the game
+        g.play_game();
+        wins[g.get_winner()]++;
+    } 
+}
+
+int main(){
     //Run the unit tests
-    // test_game tester;
-    // tester.run_all_tests();
+    /*test_game tester;
+    tester.run_all_tests();*/
 
     //Create Q_table for Q_players
     Q_Table p0_Qtable;
 
     //Create players
-    //player_random player_0;
     Q_player      player_0(p0_Qtable);
     player_random player_1;
     player_random player_2;
@@ -25,9 +34,7 @@ int main()
 
     //Play a game of Ludo
     game g(&player_0, &player_1, &player_2, &player_3);
-    std::cout << "Debug flag 2" << std::endl;
     g.play_game();
-    std::cout << "Debug flag 3" << std::endl;
     cout << "Player " << g.get_winner() << " won the game!" << endl << endl;
 
     //Play many games of Ludo
