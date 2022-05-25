@@ -208,6 +208,13 @@ int Q_player::predict_movement(int init_pos, int & action){
         res_pos = 56 - (res_pos - 56);
         action = REBOUND;
     }
+    else if ( (!goal_zone(init_pos))&&goal_zone(res_pos) ){ 
+        //Moves within goal area. Still completely useless so classified as rebound.
+        /*Unless multiple friendly pieces stand on the same goal area tile. 
+        In that case moving 1 of the pieces would be beneficial as the probability of rolling 
+        so that a piece can move into the goal area is doubled*/
+        action = REBOUND;
+    }
 
     return res_pos;    
 }
@@ -373,3 +380,6 @@ bool Q_player::in_range_of_opponent(int piece_position){
 } /*Used to find action, and not state, wont be used on state t+1
     Therefore using class variable position instead of input should be fine.*/
 
+void Q_player::set_learning(bool _learning){
+    learning = _learning;
+}

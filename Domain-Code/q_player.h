@@ -22,7 +22,7 @@ private:
     double gamma         = 0.8; //Discount factor on future rewards
 
     // Settings
-    bool learning = true;
+    bool learning = false;
 
     // Random Generator
     std::mt19937 generator;
@@ -34,6 +34,7 @@ public:
     Q_player(Q_Table& table, double learning_rate);
 
     // Public functions
+    void set_learning(bool _learning);
 
     //Public variables
     int actions_taken[N_ACTIONS] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
