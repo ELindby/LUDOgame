@@ -13,7 +13,7 @@ enum ACTIONS     {KNOCK_OPP, GO_TO_GOAL, MOVE_FROM_HOME, MOVE_FURTHEST, MOVE_NOR
                   GO_TO_SAFE, GO_TO_TEAMMATE,  MOVE_OUT_OF_RANGE, REBOUND, NOTHING};
 //Possible extra actions: Move closest-to-home piece. Move out of range.
 //                  {-, -, -, -, -, 
-//                  -, -, -, -, -, NOTHING};
+//                  -, -, -, -, -, NOTHING};//
 
 class Q_Table{
 private:

@@ -141,7 +141,7 @@ int Q_player::make_decision(){
     //Update actions taken (DEBUG PURPOSES)
     actions_taken[action] = actions_taken[action] + 1;
 
-    // Return (random if multiple) best move
+    // Return (random if multiple) best move //
     return best_move;
 }
 

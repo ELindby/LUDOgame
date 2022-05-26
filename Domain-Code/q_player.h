@@ -48,7 +48,7 @@ private:
 
     //Get state
     // std::vector<int> get_current_state();
-    // std::vector<int> get_state_from_pos(std::vector<int> positions);
+    // std::vector<int> get_state_from_pos(std::vector<int> positions);//
     int get_current_state(int candidate_piece);
     int get_state_from_pos(int candidate_piece, std::vector<int> positions);
 

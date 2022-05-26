@@ -4,7 +4,7 @@
 
 
 Q_Table::Q_Table(){ 
-    // for(int s1 = 0; s1 < N_STATES; s1++)
+    // for(int s1 = 0; s1 < N_STATES; s1++)//
     //     for(int s2 = 0; s2 < N_STATES; s2++)
     //         for(int s3 = 0; s3 < N_STATES; s3++)
     //             for(int s4 = 0; s4 < N_STATES; s4++)
