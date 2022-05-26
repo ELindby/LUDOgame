@@ -36,7 +36,7 @@ std::vector<int> evaluate(game &g){
 
 void write_results(std::vector<int> n_learning_games, std::vector<std::vector<int>> evaluations_wins){
     std::ofstream results_stream;
-    results_stream.open("../results/test01.csv");
+    results_stream.open("../results/test03.csv");
     if (!results_stream.is_open()) throw std::exception();
     if (n_learning_games.size() != evaluations_wins.size()) std::cout << "Something went wrong with logging" << std::endl;
     

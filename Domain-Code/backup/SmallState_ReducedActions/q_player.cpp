@@ -50,32 +50,6 @@ int Q_player::make_decision(){
     std::vector<int> states;//  = get_current_state();
     std::vector<int> actions; //Actions of best_move(s)
     double best_Q_value = -9999;
-
-    std::vector<int> action_corr;
-    int furthest_piece_idx = -1;
-    int furthest_piece_pos = -2;
-    for (int i = 0; i < movable_pieces.size(); i++){
-        int candidate_piece     = movable_pieces[i];
-        int state               = get_current_state(candidate_piece);
-        int action = NOTHING;
-        predict_positions(candidate_piece, action);
-        action_corr.push_back(action);
-        if ( (position[candidate_piece] > furthest_piece_pos)&&((position[candidate_piece]!= -1)&&(position[candidate_piece]!= 99)) )
-        {
-            if (action != KNOCK_SELF && action != KNOCK_OPP)
-            {
-                furthest_piece_idx = i;
-                furthest_piece_pos = position[candidate_piece];
-            }
-        }
-    }
-    if (furthest_piece_idx != -1)
-    {
-        action_corr[furthest_piece_idx] = MOVE_FURTHEST;
-    }
-    
-
-
     std::vector<int> best_moves;
     std::vector<std::vector<int>> best_predicted_positions;
     std::vector<int> predicted_positions; //Initilization outside for time opt.
@@ -84,7 +58,7 @@ int Q_player::make_decision(){
         int state               = get_current_state(candidate_piece);
         int action              = NOTHING; //default value for debug
         predicted_positions     = predict_positions(candidate_piece, action);
-        action = action_corr[i];//
+        
         
         double Q_value          = q_table->get_Q_value(state, action);
 
@@ -168,7 +142,7 @@ std::vector<int> Q_player::predict_positions(int candidate_piece_idx, int & acti
     }
     else{
         candidate_piece_res_pos =  predict_movement(candidate_piece_init_pos, action);
-        if (action == GO_TO_GOAL)
+        if (action == GO_TO_GOAL || action == REBOUND)
             return predicted_positions;
     }
 
@@ -207,22 +181,22 @@ int Q_player::predict_movement(int init_pos, int & action){
     action = MOVE_NORMAL;
 
     // Check if piece moves to safety
-    // if ( globe(res_pos) || ( (!goal_zone(init_pos))&&goal_zone(res_pos) ) ){
-    //     action = GO_TO_SAFE;
-    // }
+    if ( globe(res_pos) || ( (!goal_zone(init_pos))&&goal_zone(res_pos) ) ){
+        action = GO_TO_SAFE;
+    }
 
     // Check if piece moves to a star (And jump if it is)
     if (res_pos == 5 || res_pos == 18 || res_pos == 31 || res_pos == 44){
         res_pos += 6;
-        //action = GO_TO_STAR;
+        action = GO_TO_STAR;
     }
     else if (res_pos == 11 || res_pos == 24 || res_pos == 37 ){
         res_pos += 7;
-        //action = GO_TO_STAR;
+        action = GO_TO_STAR;
     }
     else if (res_pos == 50){
         res_pos += 6;
-        //action = GO_TO_STAR;
+        action = GO_TO_STAR;
     }
 
     // Check if piece moves to finishline and react accordingly 

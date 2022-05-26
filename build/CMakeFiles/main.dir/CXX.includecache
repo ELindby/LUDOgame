@@ -54,11 +54,23 @@ iplayer.h
 
 /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/positions_and_dice.h
 
+/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_player.cpp
+q_player.h
+/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_player.h
+iostream
+-
+exception
+-
+
 /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_player.h
 iplayer.h
 /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/iplayer.h
 random
 /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/random
+q_table.h
+/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_table.h
+
+/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_table.cpp
 q_table.h
 /home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_table.h
 
