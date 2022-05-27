@@ -48,6 +48,15 @@ std::vector<int> play_learning_games(game &g, Q_player &learning_agent_1, my_pla
     return wins;
 }
 
+std::vector<int> play_learning_games(game &g, Q_player &learning_agent_1, Q_player &learning_agent_2, int n_games){
+    learning_agent_1.set_learning(true);
+    learning_agent_2.set_learning(true);
+    std::vector<int> wins = play_games(g, n_games);
+    learning_agent_1.set_learning(false);
+    learning_agent_2.set_learning(false);
+    return wins;
+}
+
 std::vector<int> evaluate(game &g){
     return play_games(g, N_EVALUATION_GAMES);
 }
@@ -71,12 +80,13 @@ void write_results(std::vector<int> n_learning_games, std::vector<std::vector<in
 
 int main(){
     //Create Q_table for Q_players
-    Q_Table p0_Qtable;
+    Q_Table e1_Qtable;
+    Q_Table e2_Qtable;
     My_Q_Table jajep_Q_table(false);
 
     //Create players
-    Q_player      player_e_1(p0_Qtable);
-
+    Q_player      player_e1(e1_Qtable);
+    Q_player      player_e2(e2_Qtable);
     my_player     player_j(jajep_Q_table, 0.2, 0.6);
     player_random player_1;
     player_random player_2;
@@ -160,15 +170,15 @@ int main(){
     }*/
 
     //Create new copies of former pretrained players.
-    //Q_player player_e_2 = Q_player(player_e_1);
+    //Q_player player_e2 = Q_player(player_e1);
 
     // Play and train agents against each other
     //Create game
-    game g(&player_e_1, &player_e_2, &player_2, &player_3);
+    game g(&player_e1, &player_e2, &player_2, &player_3);
 
     //Set amount of learning games between evaluations
     std::vector<int> n_learning_games_cumulative = {0, 1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000}; //Note that this vector is set up to be cumulative
-    for (int i = 4000; i <= 100000; i+=2000){
+    for (int i = 4000; i <= 20000; i+=2000){
         n_learning_games_cumulative.push_back(i);
     }
 
@@ -185,7 +195,8 @@ int main(){
     std::vector<std::vector<int>> wins_pr_evaluations;
     for (int i = 0; i < n_learning_games.size(); i++){
         // Perform learning games
-        play_learning_games(g, player_e_1, player_j, n_learning_games[i]);
+        //play_learning_games(g, player_e1, player_j, n_learning_games[i]);
+        play_learning_games(g, player_e1, player_e2, n_learning_games[i]);
 
         // Evaluate
         std::vector<int> evaluation_results = evaluate(g);
