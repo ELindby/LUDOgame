@@ -27,6 +27,20 @@ Q_player::Q_player(Q_Table &table, double learning_rate){
     alpha = learning_rate;
 }
 
+Q_player::Q_player(const Q_player & p){
+    q_table = p.q_table;
+
+    // Variable parameters
+    alpha         = p.alpha;
+    default_alpha = p.default_alpha;
+    gamma         = p.gamma        ; //Discount factor on future rewards    // Settings
+    learning      = p.learning;
+
+    // Random Generator
+    generator = p.generator;
+    distribution = p.distribution;
+}
+
 int Q_player::make_decision(){
     /*********************************************************
      * Determine which move to make with Q-learning player

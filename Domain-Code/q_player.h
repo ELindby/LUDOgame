@@ -32,6 +32,8 @@ public:
     //Q_player();
     Q_player(Q_Table& table);
     Q_player(Q_Table& table, double learning_rate);
+    // Copy constructor
+    Q_player(const Q_player& p);
 
     // Public functions
     void set_learning(bool _learning);
@@ -39,8 +41,7 @@ public:
     //Public variables
     int actions_taken[N_ACTIONS] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     
-private:
-    // Private functions
+private: // Private functions
     int make_decision();
     std::vector<int> predict_positions(int piece_idx, int& action);
     int predict_movement(int init_pos, int & action);

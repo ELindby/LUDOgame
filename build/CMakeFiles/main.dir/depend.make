@@ -11,11 +11,22 @@ CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/dice.h
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/game.h
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/iplayer.h
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/main.cpp
+CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/my_player.h
+CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/my_q_table.h
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/player_random.h
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/positions_and_dice.h
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/q_player.h
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/q_table.h
 CMakeFiles/main.dir/Domain-Code/main.cpp.o: ../Domain-Code/test_game.h
+
+CMakeFiles/main.dir/Domain-Code/my_player.cpp.o: ../Domain-Code/iplayer.h
+CMakeFiles/main.dir/Domain-Code/my_player.cpp.o: ../Domain-Code/my_player.cpp
+CMakeFiles/main.dir/Domain-Code/my_player.cpp.o: ../Domain-Code/my_player.h
+CMakeFiles/main.dir/Domain-Code/my_player.cpp.o: ../Domain-Code/my_q_table.h
+CMakeFiles/main.dir/Domain-Code/my_player.cpp.o: ../Domain-Code/positions_and_dice.h
+
+CMakeFiles/main.dir/Domain-Code/my_q_table.cpp.o: ../Domain-Code/my_q_table.cpp
+CMakeFiles/main.dir/Domain-Code/my_q_table.cpp.o: ../Domain-Code/my_q_table.h
 
 CMakeFiles/main.dir/Domain-Code/q_player.cpp.o: ../Domain-Code/iplayer.h
 CMakeFiles/main.dir/Domain-Code/q_player.cpp.o: ../Domain-Code/positions_and_dice.h

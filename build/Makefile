@@ -177,6 +177,60 @@ Domain-Code/main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Domain-Code/main.cpp.s
 .PHONY : Domain-Code/main.cpp.s
 
+Domain-Code/my_player.o: Domain-Code/my_player.cpp.o
+
+.PHONY : Domain-Code/my_player.o
+
+# target to build an object file
+Domain-Code/my_player.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Domain-Code/my_player.cpp.o
+.PHONY : Domain-Code/my_player.cpp.o
+
+Domain-Code/my_player.i: Domain-Code/my_player.cpp.i
+
+.PHONY : Domain-Code/my_player.i
+
+# target to preprocess a source file
+Domain-Code/my_player.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Domain-Code/my_player.cpp.i
+.PHONY : Domain-Code/my_player.cpp.i
+
+Domain-Code/my_player.s: Domain-Code/my_player.cpp.s
+
+.PHONY : Domain-Code/my_player.s
+
+# target to generate assembly for a file
+Domain-Code/my_player.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Domain-Code/my_player.cpp.s
+.PHONY : Domain-Code/my_player.cpp.s
+
+Domain-Code/my_q_table.o: Domain-Code/my_q_table.cpp.o
+
+.PHONY : Domain-Code/my_q_table.o
+
+# target to build an object file
+Domain-Code/my_q_table.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Domain-Code/my_q_table.cpp.o
+.PHONY : Domain-Code/my_q_table.cpp.o
+
+Domain-Code/my_q_table.i: Domain-Code/my_q_table.cpp.i
+
+.PHONY : Domain-Code/my_q_table.i
+
+# target to preprocess a source file
+Domain-Code/my_q_table.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Domain-Code/my_q_table.cpp.i
+.PHONY : Domain-Code/my_q_table.cpp.i
+
+Domain-Code/my_q_table.s: Domain-Code/my_q_table.cpp.s
+
+.PHONY : Domain-Code/my_q_table.s
+
+# target to generate assembly for a file
+Domain-Code/my_q_table.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Domain-Code/my_q_table.cpp.s
+.PHONY : Domain-Code/my_q_table.cpp.s
+
 Domain-Code/q_player.o: Domain-Code/q_player.cpp.o
 
 .PHONY : Domain-Code/q_player.o
@@ -273,6 +327,12 @@ help:
 	@echo "... Domain-Code/main.o"
 	@echo "... Domain-Code/main.i"
 	@echo "... Domain-Code/main.s"
+	@echo "... Domain-Code/my_player.o"
+	@echo "... Domain-Code/my_player.i"
+	@echo "... Domain-Code/my_player.s"
+	@echo "... Domain-Code/my_q_table.o"
+	@echo "... Domain-Code/my_q_table.i"
+	@echo "... Domain-Code/my_q_table.s"
 	@echo "... Domain-Code/q_player.o"
 	@echo "... Domain-Code/q_player.i"
 	@echo "... Domain-Code/q_player.s"

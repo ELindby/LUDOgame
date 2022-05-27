@@ -6,6 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/game.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/game.cpp.o"
   "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/main.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/main.cpp.o"
+  "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/my_player.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/my_player.cpp.o"
+  "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/my_q_table.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/my_q_table.cpp.o"
   "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_player.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/q_player.cpp.o"
   "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/q_table.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/q_table.cpp.o"
   "/home/student/Documents/AI2Workspace/LUDOgame/Domain-Code/test_game.cpp" "/home/student/Documents/AI2Workspace/LUDOgame/build/CMakeFiles/main.dir/Domain-Code/test_game.cpp.o"
